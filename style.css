@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
+    url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
+    url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.main {
+  margin-bottom: 1em;
+}
+
+.main h1,
+.ingredients h2 {
+  font-family: Playfair Display;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.main h1 {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 0;
+}
+
+.main-text {
+  display: flex;
+}
+
+.main-text img {
+  align-self: end;
+  margin-block-start: 1em;
+  padding-right: 0.5em;
+}
+
+.main-text p {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  color: #4f4f4f;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.img-container img {
+  width: 95%;
+  border-radius: 12px;
+}
+
+.container {
+  display: block;
+}
+
+.times {
+  display: block;
+  width: auto;
+  height: auto;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+  padding: 0;
+}
+
+.times,
+.times-details {
+  width: 95%;
+}
+
+.times-details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+.servings,
+.prep-time {
+  display: flex;
+  font-family: Montserrat;
+  font-style: normal;
+  align-items: center;
+  text-transform: uppercase;
+  padding-bottom: 0px;
+}
+
+.servings span,
+.servings-p {
+  color: #f2994a;
+}
+
+.servings span,
+.prep-time span {
+  padding-right: 0.2em;
+}
+
+.servings-title,
+.unidad-title {
+  font-weight: bold;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.servings-p,
+.unidad-p {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: none;
+}
+
+.unidad-p {
+  color: #333333;
+}
+
+.ingredients {
+  width: auto;
+}
+
+.ingredients h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.ingredients h3,
+.instructions p {
+  font-family: Playfair Display;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.ingredients h3 {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  font-weight: bold;
+}
+
+.list label {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  color: #333333;
+}
+
+.instructions-steps {
+  width: 95%;
+}
+
+.instructions-steps li {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.instructions p {
+  font-size: 12px;
+  line-height: 150%;
+  color: #bdbdbd;
+  margin: 0;
+  padding: 0 10px;
+}
+
+body .copyright {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #828282;
+  margin-top: 25px;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 0 4px;
+  box-shadow: none;
+  filter: hue-rotate(150deg);
+}
+
+/* LIST - INSTRUCTIONS */
+.steps {
+  clear: both;
+  list-style: none;
+  padding-left: 2%;
+}
+.steps li {
+  margin: 2em 0;
+  padding-top: 1em;
+  display: block;
+  position: relative;
+  counter-increment: inst;
+}
+.steps li::before {
+  content: counter(inst);
+  background: rgba(255, 150, 0, 0.35);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 1px 1px rgba(255, 150, 0, 0.5);
+  border-radius: 0 0.675em 0.675em 0;
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 5px;
+  padding-left: 2.25%;
+  left: -5%;
+  top: -0.65em;
+  height: 1.35em;
+  width: 1.35em;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
+}
+@media (min-width: 33em) {
+  .steps li:before {
+    border-radius: 50%;
+    font-size: 1.5em;
+    height: 1.35em;
+    margin-left: 2.5%;
+    padding-left: 0;
+    padding-top: 0;
+    top: -0.15em;
+    width: 1.35em;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-text p {
+    font-size: 14px;
+  }
+
+  .servings {
+    padding-left: 20px;
+  }
+
+  .servings-title,
+  .unidad-title {
+    font-size: 10px;
+  }
+
+  .servings-p,
+  .unidad-p {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .ingredients {
+    width: 70%;
+  }
+
+  .times {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 50%;
+    align-items: center;
+    align-self: center;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+    border-radius: 12px;
+    padding: 10% 5%;
+  }
+
+  .times-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servings,
+  .prep-time {
+    padding-bottom: 15px;
+  }
+}
